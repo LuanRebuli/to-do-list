@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #7F00FF 0%, #E100FF 100%);
+}
+
+#container {
+    width: 541px; 
+    background: #FFFFFF;
+    border-radius: 5px;
+    display: block;
+    margin-top: 166px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+}
+
+#input-write {
+    width: 342px;
+    height: 40px;
+    padding: 0 15px;
+    border: 2px solid rgba(209, 211, 212, 0.4);
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 15px;
+    color: #000000;
+}
+
+#button-add {
+    width: 130px;
+    height: 40px;
+    background: #8052EC;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+    float: right;
+}
+
+#button-add:hover {
+    opacity: 0.5;
+}
+
+#button-add:active {
+    opacity: 0.6;
+}
+
+#tasks {
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.item-tasks {
+    background: #F2F2F2;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px 45px;
+    position: relative;
+    margin-top: 45px;
+}
+
+.name-tasks {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.button-delet {
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fa-trash  {
+    color: red;
+}
+
+.button-done {
+    border: none;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fa-rocket {
+    color: #4F0FC5;
+}
+
+.item-tasks:hover .button-delet {
+    opacity: 1;
+}
+
+.item-tasks:hover .button-done {
+    opacity: 1;
+}
+
+.finish {
+    background-color: rgb(8, 235, 103);
+    text-decoration: line-through;
+}
