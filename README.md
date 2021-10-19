@@ -3,7 +3,7 @@
 
 <img src="./assets/Screenshot.png" alt="img finished project">
 
-> this project has a bookmark of achievement, delete, and save the last list made after reloading or exiting the site.
+> this project has a bookmark of achievement, delete and save the last list made after reloading or exiting the site.
 ### Adjustments and improvements
 
 The project is still under development and future updates will focus on the following tasks:
