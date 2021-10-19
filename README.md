@@ -11,8 +11,15 @@ The project is still under development and future updates will focus on the foll
 - [x] HTML
 - [x] CSS
 - [x] JS
+- [ ] Responsive
 
-## 🤝 Contributors
+## To view
+
+> if you want to view the project in your browser use this link from github itself.
+
+https://luanrebuli.github.io/to-do-list/
+
+## Contributors
 
 We thank the following people who contributed to this project:
 
