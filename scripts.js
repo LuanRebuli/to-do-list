@@ -11,12 +11,12 @@ function showTasks() {
     arrayOfTasks.forEach((works, index) => {
 
         newLi = newLi + `
-        <li class="item-tasks ${ works.concluded == true ? "finish" : "" }">
+        <li class="item-tasks ${works.concluded == true ? "finish" : ""}">
             <button class="button-done" onclick="finishTasks(${index})">
                 <i class="fas fa-rocket"></i>
             </button>
 
-            <p class="name-tasks ${ works.concluded == true ? "finish" : "" }" id="name-tasks-id">${works.works}</p>
+            <p class="name-tasks ${works.concluded == true ? "finish" : ""}" id="name-tasks-id">${works.works}</p>
 
             <button class="button-delet" onclick="deletTasks(${index})">
                 <i class="fas fa-trash"></i>
@@ -37,11 +37,18 @@ function deletTasks(index) {
 }
 
 function addTasks() {
-    arrayOfTasks.push({
-        works: input.value,
-        finish: false
-    }) 
 
+    if (input.value) {
+        arrayOfTasks.push({
+            works: input.value,
+            finish: false
+        })
+    }
+    else {
+        alert("Digite uma tarefa.")
+    }
+
+    input.value = ""
     showTasks()
 }
 
@@ -54,10 +61,21 @@ function finishTasks(index) {
 function reloadTasks() {
     let myTasks = localStorage.getItem("list")
 
-    arrayOfTasks = JSON.parse(myTasks)
+    if (myTasks) {
+        arrayOfTasks = JSON.parse(myTasks)
+        showTasks()
+    }
 
-    showTasks()
+}
+
+function addOnEnter(teclas) {
+
+    if (teclas.key === "Enter") {
+        addTasks()
+    }
+
 }
 
 button.addEventListener("click", addTasks)
 
+document.addEventListener("keypress", addOnEnter)
